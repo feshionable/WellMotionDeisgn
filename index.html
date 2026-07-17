@@ -313,10 +313,10 @@
         <div class="label">Passo 1 de 3</div>
         <h3>Tipo de vídeo</h3>
         <div class="options" data-group="tipo">
-          <button class="opt hover-target" data-value="Vinheta/Intro" data-base="250">Vinheta / Intro<span>Abertura curta</span></button>
-          <button class="opt hover-target" data-value="Social Media Motion" data-base="220">Social Media<span>Reels / Stories</span></button>
-          <button class="opt hover-target" data-value="Vídeo Explicativo" data-base="450">Explicativo<span>Institucional</span></button>
-          <button class="opt hover-target" data-value="Animação de Logo" data-base="200">Animação de logo<span>Branding</span></button>
+          <button class="opt hover-target" data-value="Vinheta/Intro" data-base="70">Vinheta / Intro<span>Abertura curta</span></button>
+          <button class="opt hover-target" data-value="Social Media Motion" data-base="90">Social Media<span>Reels / Stories</span></button>
+          <button class="opt hover-target" data-value="Vídeo Explicativo" data-base="150">Explicativo<span>Institucional</span></button>
+          <button class="opt hover-target" data-value="Animação de Logo" data-base="65">Animação de logo<span>Branding</span></button>
         </div>
       </div>
 
@@ -324,10 +324,10 @@
         <div class="label">Passo 2 de 3</div>
         <h3>Duração aproximada</h3>
         <div class="options" data-group="duracao">
-          <button class="opt hover-target" data-value="até 15s" data-mult="0.8">Até 15s<span>Curta</span></button>
-          <button class="opt hover-target" data-value="15–30s" data-mult="1">15–30s<span>Padrão</span></button>
-          <button class="opt hover-target" data-value="30–60s" data-mult="1.4">30–60s<span>Média</span></button>
-          <button class="opt hover-target" data-value="1–3min" data-mult="2">1–3min<span>Longa</span></button>
+          <button class="opt hover-target" data-value="até 15s" data-mult="0.6">Até 15s<span>Curta</span></button>
+          <button class="opt hover-target" data-value="15–30s" data-mult="0.8">15–30s<span>Padrão</span></button>
+          <button class="opt hover-target" data-value="30–60s" data-mult="1">30–60s<span>Média (~1min)</span></button>
+          <button class="opt hover-target" data-value="1–3min" data-mult="1.6">1–3min<span>Longa</span></button>
         </div>
       </div>
 
@@ -336,8 +336,8 @@
         <h3>Estilo</h3>
         <div class="options" data-group="estilo">
           <button class="opt hover-target" data-value="Simples" data-mult="1">Simples<span>Formas & texto</span></button>
-          <button class="opt hover-target" data-value="Intermediário" data-mult="1.5">Intermediário<span>Personagens / ilustração</span></button>
-          <button class="opt hover-target" data-value="Avançado" data-mult="2.2">Avançado<span>3D / efeitos complexos</span></button>
+          <button class="opt hover-target" data-value="Intermediário" data-mult="1.35">Intermediário<span>Personagens / ilustração</span></button>
+          <button class="opt hover-target" data-value="Avançado" data-mult="1.8">Avançado<span>3D / efeitos complexos</span></button>
         </div>
       </div>
 
@@ -471,7 +471,7 @@ function finish(){
   document.getElementById('resultSummary').innerHTML =
     `<b>Tipo:</b> ${choice.tipo}<br><b>Duração:</b> ${choice.duracao}<br><b>Estilo:</b> ${choice.estilo}`;
   const msg = `Olá! Fiz uma simulação no site da WMotion Design:%0A- Tipo: ${choice.tipo}%0A- Duração: ${choice.duracao}%0A- Estilo: ${choice.estilo}%0A- Estimativa: R$ ${low} a R$ ${high}%0A%0AGostaria de fechar um orçamento mais detalhado!`;
-  document.getElementById('waLink').href = `https://wa.me/558498763772?text=${msg}`;
+  document.getElementById('waLink').href = `https://wa.me/5584987633772?text=${msg}`;
   showStep(4);
 }
 
