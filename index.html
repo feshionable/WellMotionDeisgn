@@ -3,621 +3,482 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WMotion Design — Motion design que dá ritmo à sua marca</title>
+<title>WMotion Design — Motion Design & Animação</title>
+<meta name="description" content="WMotion Design — vinhetas, animações e motion design para redes sociais, marcas e produtos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
---bg:#0A0A0A;
---panel:#141414;
---panel-2:#1E1E1E;
---line:rgba(255,255,255,0.12);
---text:#FFFFFF;
---dim:rgba(255,255,255,0.62);
---dim-2:rgba(255,255,255,0.36);
---white:#FFFFFF;
---gray:#8C8C8C;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-background:var(--bg);color:var(--text);
-font-family:'Inter',sans-serif;line-height:1.55;
--webkit-font-smoothing:antialiased;
-overflow-x:hidden;
-}
-h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-0.01em;}
-.mono{font-family:'IBM Plex Mono',monospace;}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;display:block;}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
-::selection{background:#fff;color:#000;}
-.eyebrow{
-font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
-color:var(--dim);display:flex;align-items:center;gap:10px;
-}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 10px rgba(255,255,255,0.6);}
-/* NAV */
-header{position:sticky;top:0;z-index:60;background:rgba(10,10,10,0.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1160px;margin:0 auto;}
-.logo{display:flex;align-items:center;gap:9px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.02em;}
-.logo .rec{width:9px;height:9px;border-radius:50%;background:#fff;animation:pulse 1.6s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.2;}}
-.nav-links{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--dim);}
-.nav-links a:hover{color:#fff;}
-.nav-cta{
-background:#fff;color:#0A0A0A;padding:10px 18px;border-radius:8px;font-weight:700;font-size:13.5px;
-display:flex;align-items:center;gap:8px;transition:background .2s ease, transform .2s ease;
-}
-.nav-cta:hover{background:var(--gray);color:#000;transform:translateY(-1px);}
-@media(max-width:780px){.nav-links{display:none;}}
-/* HERO */
-.hero{padding:90px 0 60px;position:relative;}
-.hero-top{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
-.hero h1{font-size:clamp(38px,5.6vw,68px);line-height:1.02;font-weight:800;margin:20px 0 22px;}
-.hero h1 .accent{-webkit-text-stroke:1.5px #fff;color:transparent;}
-.hero p.lead{font-size:17px;color:var(--dim);max-width:460px;margin-bottom:32px;}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-.btn-primary{
-background:#fff;color:#0A0A0A;padding:15px 26px;border-radius:10px;
-font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:10px;
-box-shadow:0 10px 30px -10px rgba(255,255,255,0.25);transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
-border:none;cursor:pointer;font-family:'Inter',sans-serif;
-}
-.btn-primary:hover{transform:translateY(-2px);background:var(--gray);}
-.btn-ghost{border:1.5px solid var(--line);color:var(--text);padding:13.5px 22px;border-radius:10px;font-weight:600;font-size:14.5px;transition:border-color .2s ease,background .2s ease;}
-.btn-ghost:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05);}
-/* VIEWPORT / PLAYER */
-.viewport{
-background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;
-aspect-ratio:4/5;position:relative;
-}
-.viewport-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font-size:11px;color:var(--dim-2);}
-.viewport-bar .dots{display:flex;gap:6px;}
-.viewport-bar .dots span{width:8px;height:8px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line);}
-.viewport-stage{position:relative;height:calc(100% - 78px);overflow:hidden;background:
-radial-gradient(circle at 30% 20%, rgba(255,255,255,0.09), transparent 55%),
-radial-gradient(circle at 75% 75%, rgba(255,255,255,0.06), transparent 55%);
-}
-.blob{position:absolute;border-radius:40% 60% 55% 45%/50% 40% 60% 50%;filter:blur(2px);mix-blend-mode:screen;border:1px solid rgba(255,255,255,0.5);}
-.blob-1{width:180px;height:180px;background:rgba(255,255,255,0.14);top:14%;left:10%;animation:float1 7s ease-in-out infinite;}
-.blob-2{width:140px;height:140px;background:rgba(255,255,255,0.1);bottom:16%;right:12%;animation:float2 8.5s ease-in-out infinite;}
-.blob-3{width:90px;height:90px;background:rgba(255,255,255,0.18);top:44%;right:22%;animation:float3 6s ease-in-out infinite;}
-@keyframes float1{0%,100%{transform:translate(0,0) rotate(0deg);}50%{transform:translate(24px,18px) rotate(30deg);}}
-@keyframes float2{0%,100%{transform:translate(0,0) rotate(0deg);}50%{transform:translate(-20px,-16px) rotate(-24deg);}}
-@keyframes float3{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-14px,10px) scale(1.15);}}
-@media (prefers-reduced-motion: reduce){.blob{animation:none;}.logo .rec{animation:none;}}
-.viewport-foot{position:absolute;bottom:0;left:0;right:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(0deg,rgba(10,10,10,0.9),transparent);}
-.timecode{font-size:13px;color:#fff;letter-spacing:0.04em;}
-.play-btn{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;}
-.trust-strip{display:flex;flex-wrap:wrap;gap:22px 32px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--dim);}
-.trust-strip b{color:#fff;}
-/* TICKER */
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden;background:var(--panel);}
-.ticker-track{display:flex;gap:52px;width:max-content;animation:tick 22s linear infinite;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim-2);white-space:nowrap;}
-.ticker-track span{display:flex;align-items:center;gap:10px;}
-.ticker-track span::before{content:"//";color:#fff;}
-@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@media (prefers-reduced-motion: reduce){.ticker-track{animation:none;overflow-x:auto;}}
-/* SECTIONS */
-section{padding:96px 0;}
-.section-head{max-width:560px;margin-bottom:52px;}
-.section-head h2{font-size:clamp(28px,3.6vw,40px);font-weight:700;margin:14px 0 14px;}
-.section-head p{color:var(--dim);font-size:16px;}
-/* SERVICES */
-.layers{border:1px solid var(--line);border-radius:16px;overflow:hidden;}
-.layer{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:20px;padding:22px 24px;border-bottom:1px solid var(--line);transition:background .2s ease;}
-.layer:last-child{border-bottom:none;}
-.layer:hover{background:var(--panel);}
-.layer-id{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim-2);}
-.layer-name h3{font-size:19px;font-weight:700;margin-bottom:6px;}
-.layer-name p{font-size:14px;color:var(--dim);max-width:520px;}
-.layer-swatch{width:14px;height:14px;border-radius:3px;justify-self:end;border:1px solid var(--line);}
-/* PORTFOLIO */
-.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.proj-card{
-position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);
-display:flex;align-items:flex-end;padding:16px;background:#000;
-}
-.proj-card .bg{position:absolute;inset:0;z-index:0;transition:transform .5s ease, filter .4s ease;filter:grayscale(1) contrast(1.05);}
-.proj-card .bg img{width:100%;height:100%;object-fit:cover;}
-.proj-card:hover .bg{transform:scale(1.06);filter:grayscale(0.2) contrast(1.05);}
-.proj-card .content{position:relative;z-index:1;}
-.proj-card .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:rgba(255,255,255,0.8);margin-bottom:6px;display:block;}
-.proj-card h4{font-size:15px;font-weight:700;color:#fff;}
-.proj-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,0.9) 5%,transparent 60%);z-index:0;}
-.play-chip{position:absolute;top:14px;right:14px;z-index:1;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;}
-@media(max-width:860px){.portfolio-grid{grid-template-columns:repeat(2,1fr);}}
-.portfolio-note{margin-top:20px;font-size:13px;color:var(--dim-2);font-family:'IBM Plex Mono',monospace;}
-/* PROCESS TIMELINE */
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
-.tl-step{background:var(--bg);padding:30px 24px;position:relative;}
-.tl-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;margin-bottom:16px;}
-.tl-step h4{font-size:17px;font-weight:700;margin-bottom:8px;}
-.tl-step p{font-size:13.5px;color:var(--dim);}
-@media(max-width:860px){.timeline{grid-template-columns:1fr;}}
-/* ORÇAMENTO */
-.quote-box{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel);}
-.quote-tabs{display:flex;border-bottom:1px solid var(--line);}
-.quote-tab{flex:1;padding:18px 20px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--dim);background:var(--panel-2);border:none;cursor:pointer;transition:all .15s ease;}
-.quote-tab.active{background:var(--panel);color:#fff;box-shadow:inset 0 -2px 0 #fff;}
-.quote-tab:hover{color:#fff;}
-.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-.quote-form{padding:36px;border-right:1px solid var(--line);}
-.quote-pane{display:none;}
-.quote-pane.active{display:block;}
-.qty-row{display:flex;align-items:center;gap:16px;}
-.qty-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--line);background:var(--panel-2);color:#fff;font-size:18px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.qty-btn:hover{border-color:rgba(255,255,255,0.4);}
-.qty-val{font-family:'IBM Plex Mono',monospace;font-size:16px;color:#fff;min-width:24px;text-align:center;}
-.quote-field{margin-bottom:24px;}
-.quote-field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;}
-.option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
-.option-btn{
-border:1px solid var(--line);background:var(--panel-2);color:var(--dim);padding:12px 14px;border-radius:10px;
-font-size:13.5px;font-weight:600;cursor:pointer;text-align:left;transition:all .15s ease;font-family:'Inter',sans-serif;
-}
-.option-btn:hover{border-color:rgba(255,255,255,0.4);color:#fff;}
-.option-btn.active{background:#fff;color:#0A0A0A;border-color:#fff;}
-.duration-row{display:flex;align-items:center;gap:16px;}
-.duration-row input[type="range"]{flex:1;accent-color:#fff;}
-.duration-val{font-family:'IBM Plex Mono',monospace;font-size:15px;color:#fff;min-width:64px;text-align:right;}
-.quote-result{padding:36px;display:flex;flex-direction:column;justify-content:center;}
-.quote-result .eyebrow{margin-bottom:18px;}
-.quote-price{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(32px,4vw,44px);font-weight:800;margin-bottom:8px;}
-.quote-price span{font-size:16px;color:var(--dim);font-weight:500;}
-.quote-note{font-size:13.5px;color:var(--dim);margin-bottom:28px;line-height:1.6;}
-.quote-summary{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim-2);margin-bottom:24px;line-height:1.9;}
-@media(max-width:860px){.quote-grid{grid-template-columns:1fr;}.quote-form{border-right:none;border-bottom:1px solid var(--line);}.option-grid{grid-template-columns:1fr 1fr;}}
-/* FINAL CTA */
-.final-cta{
-position:relative;text-align:center;padding:110px 24px;
-background:radial-gradient(circle at 50% 30%, rgba(255,255,255,0.08), transparent 60%), var(--panel);
-border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-}
-.final-cta h2{font-size:clamp(30px,4.6vw,48px);max-width:640px;margin:0 auto 18px;font-weight:800;}
-.final-cta p{color:var(--dim);max-width:460px;margin:0 auto 34px;font-size:16px;}
-.final-cta .cta-row{justify-content:center;}
-.handle{font-family:'IBM Plex Mono',monospace;color:#fff;}
-/* FOOTER */
-footer{padding:44px 0 30px;}
-.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;font-size:13px;color:var(--dim-2);}
-.foot-row a{color:var(--dim);font-weight:600;}
-.foot-row a:hover{color:#fff;}
+  :root{
+    --black:#0a0a0a;
+    --white:#f7f7f5;
+    --gray:#8a8a8a;
+    --line:#2a2a2a;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+    cursor:none;
+  }
+  ::selection{background:var(--white);color:var(--black);}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+  /* Custom cursor */
+  #cursor{
+    position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;
+    background:var(--white);pointer-events:none;z-index:9999;
+    transform:translate(-50%,-50%);transition:width .25s var(--ease),height .25s var(--ease),background .25s var(--ease),opacity .2s;
+    mix-blend-mode:difference;
+  }
+  #cursor.big{width:52px;height:52px;background:var(--white);}
+  @media (hover:none){ #cursor{display:none;} body{cursor:auto;} }
+
+  /* Nav */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:24px 32px;
+    mix-blend-mode:difference;
+  }
+  .logo{font-family:'Unbounded',sans-serif;font-weight:800;font-size:18px;letter-spacing:.02em;}
+  nav ul{list-style:none;display:flex;gap:28px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;}
+  nav a{position:relative;padding-bottom:4px;}
+  nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--white);transition:width .3s var(--ease);}
+  nav a:hover::after{width:100%;}
+  .nav-toggle{display:none;background:none;border:none;color:var(--white);font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;}
+  @media (max-width:760px){
+    nav ul{display:none;}
+    .nav-toggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    position:relative;padding:120px 32px 60px;
+  }
+  .hero-inner{max-width:1180px;margin:0 auto;width:100%;}
+  .eyebrow{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);margin-bottom:22px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:'';width:26px;height:1px;background:var(--gray);}
+  .kinetic{
+    position:relative;font-family:'Unbounded',sans-serif;font-weight:900;
+    font-size:clamp(48px,10vw,132px);line-height:.94;letter-spacing:-.02em;
+    text-transform:uppercase;
+  }
+  .kinetic span{display:block;position:relative;}
+  .kinetic .layer{
+    position:absolute;top:0;left:0;width:100%;
+    color:var(--white);
+    opacity:0;
+    transform:translate(calc(var(--kx,0)*var(--n,0)),calc(var(--ky,0)*var(--n,0)));
+    mix-blend-mode:screen;
+    pointer-events:none;
+  }
+  .kinetic .layer.l1{opacity:.18;--n:1;}
+  .kinetic .layer.l2{opacity:.10;--n:2;}
+  .kinetic .layer.l3{opacity:.05;--n:3;}
+  .hero-sub{margin-top:32px;max-width:480px;font-size:16px;line-height:1.6;color:#c9c9c9;}
+  .hero-cta{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 26px;border:1px solid var(--white);border-radius:999px;
+    font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+    transition:background .3s var(--ease),color .3s var(--ease);
+  }
+  .btn:hover{background:var(--white);color:var(--black);}
+  .btn.ghost{border-color:var(--line);color:var(--gray);}
+  .btn.ghost:hover{border-color:var(--white);background:transparent;color:var(--white);}
+  .scroll-cue{position:absolute;bottom:36px;left:32px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);display:flex;align-items:center;gap:10px;}
+  .scroll-cue .bar{width:1px;height:34px;background:var(--gray);position:relative;overflow:hidden;}
+  .scroll-cue .bar::after{content:'';position:absolute;top:-40%;left:0;width:100%;height:40%;background:var(--white);animation:cue 1.6s infinite var(--ease);}
+  @keyframes cue{0%{top:-40%;}100%{top:100%;}}
+
+  /* MARQUEE */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:18px 0;overflow:hidden;white-space:nowrap;
+  }
+  .marquee-track{display:inline-flex;animation:scroll 26s linear infinite;}
+  .marquee-track span{
+    font-family:'Unbounded',sans-serif;font-weight:600;font-size:16px;
+    text-transform:uppercase;letter-spacing:.04em;padding:0 28px;color:var(--gray);
+    display:inline-flex;align-items:center;gap:28px;
+  }
+  .marquee-track span::after{content:'●';font-size:8px;color:var(--white);}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* Section shell */
+  section{padding:110px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px;flex-wrap:wrap;}
+  .section-head h2{font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,52px);text-transform:uppercase;line-height:1;}
+  .section-head p{max-width:340px;color:var(--gray);font-size:14px;line-height:1.6;}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* PORTFOLIO */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);}
+  @media (max-width:720px){.grid{grid-template-columns:1fr;}}
+  .card{
+    background:var(--black);position:relative;aspect-ratio:4/3;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:26px;
+  }
+  .card .frames{
+    position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg,#161616 0 2px,transparent 2px 34px);
+    transform:translateX(0);transition:transform 1.2s var(--ease);
+  }
+  .card:hover .frames{transform:translateX(-60px);}
+  .card .num{position:absolute;top:22px;right:26px;font-size:12px;color:var(--gray);letter-spacing:.1em;}
+  .card h3{position:relative;font-family:'Unbounded',sans-serif;font-size:22px;font-weight:800;text-transform:uppercase;transition:transform .4s var(--ease);}
+  .card p{position:relative;color:var(--gray);font-size:13px;margin-top:6px;}
+  .card:hover h3{transform:translateX(8px);}
+  .card::before{
+    content:'';position:absolute;left:26px;bottom:0;height:1px;width:0;background:var(--white);
+    transition:width .5s var(--ease);
+  }
+  .card:hover::before{width:calc(100% - 52px);}
+
+  /* SERVICES */
+  .service-row{
+    border-top:1px solid var(--line);padding:26px 0;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;
+  }
+  .service-row:last-child{border-bottom:1px solid var(--line);}
+  .service-row h3{font-family:'Unbounded',sans-serif;font-size:clamp(18px,2.4vw,26px);text-transform:uppercase;font-weight:600;transition:letter-spacing .3s var(--ease);}
+  .service-row:hover h3{letter-spacing:.02em;}
+  .service-row .plus{font-size:22px;color:var(--gray);transition:transform .35s var(--ease);flex-shrink:0;}
+  .service-row.open .plus{transform:rotate(45deg);}
+  .service-body{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);grid-column:1/-1;}
+  .service-row.open + .service-body{max-height:120px;}
+  .service-body p{color:var(--gray);font-size:14px;line-height:1.6;padding:0 0 6px;max-width:520px;}
+  .service-wrap .service-item{display:grid;}
+
+  /* CALCULATOR */
+  .calc{
+    border:1px solid var(--line);border-radius:20px;padding:44px;position:relative;overflow:hidden;
+  }
+  @media (max-width:640px){.calc{padding:26px;}}
+  .calc-progress{height:2px;background:var(--line);margin-bottom:40px;border-radius:2px;overflow:hidden;}
+  .calc-progress-bar{height:100%;width:33%;background:var(--white);transition:width .5s var(--ease);}
+  .calc-step{display:none;}
+  .calc-step.active{display:block;animation:fadein .5s var(--ease);}
+  @keyframes fadein{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+  .calc-step .label{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.15em;margin-bottom:6px;}
+  .calc-step h3{font-family:'Unbounded',sans-serif;font-size:clamp(20px,3vw,30px);margin-bottom:26px;text-transform:uppercase;}
+  .options{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
+  .opt{
+    border:1px solid var(--line);border-radius:12px;padding:18px;text-align:left;
+    background:transparent;color:var(--white);font-family:'Inter',sans-serif;font-size:14px;cursor:pointer;
+    transition:border-color .25s var(--ease),background .25s var(--ease);
+  }
+  .opt span{display:block;color:var(--gray);font-size:12px;margin-top:4px;}
+  .opt:hover{border-color:var(--white);}
+  .opt.selected{background:var(--white);color:var(--black);border-color:var(--white);}
+  .opt.selected span{color:#555;}
+  .calc-nav{display:flex;justify-content:space-between;margin-top:34px;}
+  .calc-nav button{background:none;border:none;color:var(--gray);font-size:13px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;}
+  .calc-nav button:hover{color:var(--white);}
+  .calc-result h3{font-family:'Unbounded',sans-serif;font-size:clamp(26px,4vw,40px);text-transform:uppercase;margin-bottom:10px;}
+  .calc-result .price{font-size:14px;color:var(--gray);margin-bottom:26px;}
+  .calc-result .price b{color:var(--white);font-size:18px;}
+  .summary{border-top:1px solid var(--line);padding-top:18px;margin-bottom:26px;font-size:13px;color:var(--gray);line-height:2;}
+  .summary b{color:var(--white);font-weight:500;}
+
+  /* CONTACT / FOOTER */
+  footer{border-top:1px solid var(--line);padding:80px 0 40px;}
+  .foot-head{font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(32px,7vw,80px);text-transform:uppercase;line-height:.95;margin-bottom:40px;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:40px;margin-bottom:60px;}
+  .foot-col h4{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray);margin-bottom:14px;}
+  .foot-col a, .foot-col p{font-size:14px;display:block;margin-bottom:8px;color:var(--white);}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--gray);font-size:12px;border-top:1px solid var(--line);padding-top:22px;}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+  }
 </style>
 </head>
 <body>
+
+<div id="cursor"></div>
+
 <header>
-<nav>
-<div class="logo"><span class="rec"></span>WMOTION</div>
-<div class="nav-links">
-<a href="#servicos">Serviços</a>
-<a href="#trabalhos">Trabalhos</a>
-<a href="#processo">Processo</a>
-<a href="#orcamento">Orçamento</a>
-</div>
-<a class="nav-cta" href="#orcamento">Fazer orçamento</a>
-</nav>
+  <div class="logo">WMOTION°</div>
+  <nav><ul>
+    <li><a href="#trabalhos">Trabalhos</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#orcamento">Orçamento</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul></nav>
+  <button class="nav-toggle" id="navToggle">Menu</button>
 </header>
 
-<section class="hero">
-<div class="wrap">
-<div class="hero-top">
-<div>
-<div class="eyebrow"><span class="dot"></span>MOTION DESIGN & DESIGN GRÁFICO</div>
-<h1>Sua marca merece <span class="accent">se mexer.</span></h1>
-<p class="lead">Animações, identidade visual e conteúdo para redes sociais que fazem sua ideia parar o scroll — do roteiro ao render final, tudo pensado pra comunicar rápido e ficar na cabeça.</p>
-<div class="cta-row">
-<a class="btn-primary" href="#orcamento">Fazer orçamento →</a>
-<a class="btn-ghost" href="#trabalhos">Ver trabalhos</a>
-</div>
-<div class="trust-strip">
-<span>Disponível para <b>freelance</b> — Natal, Brasil</span>
-<span>Portfólio completo no <b>Behance</b></span>
-</div>
-</div>
-<div class="viewport">
-<div class="viewport-bar">
-<span class="mono">reel_final_v3.mp4</span>
-<div class="dots"><span></span><span></span><span></span></div>
-</div>
-<div class="viewport-stage">
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-<div class="blob blob-3"></div>
-</div>
-<div class="viewport-foot">
-<span class="timecode mono" id="tc">00:00:00:00</span>
-<div class="play-btn">
-<svg width="12" height="12" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section class="hero" id="heroWrap">
+  <div class="hero-inner">
+    <div class="eyebrow">Motion Design · Natal, RN</div>
+    <h1 class="kinetic" id="kinetic">
+      <span>Damos vida
+        <span class="layer l1" aria-hidden="true">Damos vida</span>
+        <span class="layer l2" aria-hidden="true">Damos vida</span>
+        <span class="layer l3" aria-hidden="true">Damos vida</span>
+      </span>
+      <span>ao que é
+        <span class="layer l1" aria-hidden="true">ao que é</span>
+        <span class="layer l2" aria-hidden="true">ao que é</span>
+      </span>
+      <span>estático
+        <span class="layer l1" aria-hidden="true">estático</span>
+        <span class="layer l2" aria-hidden="true">estático</span>
+      </span>
+    </h1>
+    <p class="hero-sub">WMotion Design é um estúdio independente de motion design: vinhetas, animações e conteúdo em movimento para marcas que não querem passar despercebidas.</p>
+    <div class="hero-cta">
+      <a href="#orcamento" class="btn hover-target">Simular orçamento</a>
+      <a href="#trabalhos" class="btn ghost hover-target">Ver trabalhos</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="bar"></div>Role para explorar</div>
 </section>
 
-<div class="ticker">
-<div class="ticker-track">
-<span>After Effects</span><span>Motion Graphics</span><span>Design Gráfico</span><span>Identidade Visual</span><span>Social Media</span><span>Kinetic Typography</span><span>Edição de vídeo</span>
-<span>After Effects</span><span>Motion Graphics</span><span>Design Gráfico</span><span>Identidade Visual</span><span>Social Media</span><span>Kinetic Typography</span><span>Edição de vídeo</span>
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Motion Design</span><span>Animação 2D</span><span>Animação 3D</span><span>Vinhetas</span><span>Social Media</span><span>VFX</span>
+    <span>Motion Design</span><span>Animação 2D</span><span>Animação 3D</span><span>Vinhetas</span><span>Social Media</span><span>VFX</span>
+  </div>
 </div>
-</div>
-
-<section id="servicos">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow"><span class="dot"></span>O QUE EU FAÇO</div>
-<h2>Cada camada, pensada pra dar ritmo à mensagem.</h2>
-<p>Do primeiro storyboard até o arquivo final exportado, cada entrega passa pelas mesmas camadas de cuidado.</p>
-</div>
-<div class="layers">
-<div class="layer">
-<div class="layer-id mono">01</div>
-<div class="layer-name"><h3>Motion graphics</h3><p>Animações para marcas, produtos e apresentações — de logos animados a peças completas.</p></div>
-<div class="layer-swatch" style="background:#fff"></div>
-</div>
-<div class="layer">
-<div class="layer-id mono">02</div>
-<div class="layer-name"><h3>Identidade visual</h3><p>Marca, tipografia e sistema visual construídos para funcionar em qualquer peça.</p></div>
-<div class="layer-swatch" style="background:#B8B8B8"></div>
-</div>
-<div class="layer">
-<div class="layer-id mono">03</div>
-<div class="layer-name"><h3>Social media</h3><p>Posts, portfólios e campanhas para redes sociais com direção de arte consistente.</p></div>
-<div class="layer-swatch" style="background:#8C8C8C"></div>
-</div>
-<div class="layer">
-<div class="layer-id mono">04</div>
-<div class="layer-name"><h3>Edição de vídeo</h3><p>Corte, ritmo e finalização — transformando material bruto em peça pronta pra publicar.</p></div>
-<div class="layer-swatch" style="background:#4D4D4D"></div>
-</div>
-</div>
-</div>
-</section>
 
 <section id="trabalhos">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow"><span class="dot"></span>PORTFÓLIO</div>
-<h2>Trabalhos direto do Behance.</h2>
-<p>Uma seleção de projetos publicados — clique em qualquer card para ver o case completo.</p>
-</div>
-<div class="portfolio-grid">
-<a class="proj-card" href="https://www.behance.net/gallery/231775703/ABC-110-ANOS" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/23725a231775703.Y3JvcCwxNTM0LDEyMDAsMjMxLDA.png" alt="ABC 110 Anos"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">DESIGN GRÁFICO</span><h4>ABC 110 Anos</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/226264853/PROJETO-AUTORAL-DIADORA" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/4cc31e226264853.Y3JvcCwxMjk5LDEwMTYsNDY5LDE5Mg.png" alt="Projeto Autoral Diadora"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">PROJETO AUTORAL</span><h4>Diadora</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/226072297/IDENTIDADE-VISUAL" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/748c80226072297.68280cbfe7387.jpg" alt="Identidade Visual"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">BRANDING</span><h4>Identidade Visual</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/225465487/MOTION-AUTORAL" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/062925225465487.Y3JvcCwxNTM0LDEyMDAsMjMxLDA.png" alt="Motion Autoral"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">MOTION</span><h4>Motion Autoral</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/225452891/PROJETO-ABC-FC-2025" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/4252b1225452891.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="Projeto ABC FC 2025"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">ESPORTIVO</span><h4>ABC FC 2025</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/215258957/Acougue-Premium-Social-Media" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/1216d3215258957.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="Açougue Premium Social Media"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">SOCIAL MEDIA</span><h4>Açougue Premium</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/185771699/Portifolio-Odontologia" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/00709f185771699.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="Portfólio Odontologia"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">SOCIAL MEDIA</span><h4>Portfólio Odontologia</h4></div>
-</a>
-<a class="proj-card" href="https://www.behance.net/gallery/185235539/Portifolio-Esportivo" target="_blank" rel="noopener">
-<div class="bg"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/d55adc185235539.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="Portfólio Esportivo"></div>
-<div class="play-chip"><svg width="9" height="9" viewBox="0 0 12 12" fill="#fff"><path d="M2 1.5v9l8-4.5z"/></svg></div>
-<div class="content"><span class="tag mono">ESPORTIVO</span><h4>Portfólio Esportivo</h4></div>
-</a>
-</div>
-<div class="portfolio-note">// veja o portfólio completo em behance.net/wellberthsousa1</div>
-</div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Trabalhos<br>selecionados</h2>
+      <p>Uma seleção de peças recentes. Portfólio completo disponível no Behance.</p>
+    </div>
+  </div>
+  <div class="grid wrap" style="max-width:1180px;margin:0 auto;">
+    <div class="card reveal hover-target"><div class="frames"></div><div class="num">01</div><h3>Identidade em movimento</h3><p>Motion branding · Instagram</p></div>
+    <div class="card reveal hover-target"><div class="frames"></div><div class="num">02</div><h3>Vinheta institucional</h3><p>2D · Abertura de vídeo</p></div>
+    <div class="card reveal hover-target"><div class="frames"></div><div class="num">03</div><h3>Reels para marca de piscinas</h3><p>Social media motion</p></div>
+    <div class="card reveal hover-target"><div class="frames"></div><div class="num">04</div><h3>Explicativo animado</h3><p>Motion + storytelling</p></div>
+  </div>
+  <div class="wrap" style="margin-top:40px;">
+    <a href="https://www.behance.net/wellberthsousa1" target="_blank" rel="noopener" class="btn ghost hover-target">Ver portfólio completo no Behance ↗</a>
+  </div>
 </section>
 
-<section id="processo">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow"><span class="dot"></span>COMO FUNCIONA</div>
-<h2>Do briefing ao arquivo pronto pra postar.</h2>
-</div>
-<div class="timeline">
-<div class="tl-step">
-<div class="tl-num mono">FRAME 01</div>
-<h4>Briefing</h4>
-<p>Entendo a ideia, o público e onde a peça vai ser publicada.</p>
-</div>
-<div class="tl-step">
-<div class="tl-num mono">FRAME 02</div>
-<h4>Roteiro & estilo</h4>
-<p>Defino referências visuais e ritmo antes de produzir qualquer coisa.</p>
-</div>
-<div class="tl-step">
-<div class="tl-num mono">FRAME 03</div>
-<h4>Produção</h4>
-<p>Design ou animação com pelo menos uma rodada de ajustes inclusa.</p>
-</div>
-<div class="tl-step">
-<div class="tl-num mono">FRAME 04</div>
-<h4>Entrega</h4>
-<p>Exportação nos formatos certos para cada rede ou plataforma de destino.</p>
-</div>
-</div>
-</div>
+<section id="servicos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Serviços</h2>
+      <p>Do conceito à entrega final, animado quadro a quadro.</p>
+    </div>
+    <div class="service-wrap">
+      <div class="service-item">
+        <div class="service-row hover-target"><h3>Vinhetas & aberturas</h3><span class="plus">+</span></div>
+        <div class="service-body"><p>Aberturas curtas e marcantes para vídeos, canais e apresentações.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-row hover-target"><h3>Motion para redes sociais</h3><span class="plus">+</span></div>
+        <div class="service-body"><p>Reels, stories e posts animados pensados para reter atenção no feed.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-row hover-target"><h3>Animação de logo & branding</h3><span class="plus">+</span></div>
+        <div class="service-body"><p>Sua marca ganhando movimento próprio, com identidade consistente.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-row hover-target"><h3>Vídeos explicativos</h3><span class="plus">+</span></div>
+        <div class="service-body"><p>Roteiro + animação para explicar produtos e serviços de forma simples.</p></div>
+      </div>
+      <div class="service-item">
+        <div class="service-row hover-target"><h3>Flyers & artes gráficas</h3><span class="plus">+</span></div>
+        <div class="service-body"><p>Peças gráficas estáticas para divulgação, a partir de R$45.</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="orcamento">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow"><span class="dot"></span>ORÇAMENTO INSTANTÂNEO</div>
-<h2>Monta o seu projeto e vê o valor na hora.</h2>
-<p>Escolhe o tipo de peça, a duração e o nível de complexidade — o valor é uma estimativa e o pedido já sai pronto pra me chamar no WhatsApp.</p>
-</div>
-<div class="quote-box">
-<div class="quote-tabs">
-<button type="button" class="quote-tab active" data-tab="video">🎬 Vídeo</button>
-<button type="button" class="quote-tab" data-tab="foto">🖼️ Foto & Flyer</button>
-</div>
-<div class="quote-grid">
-<div class="quote-form">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Simule seu<br>orçamento</h2>
+      <p>Três perguntas rápidas e você já sai com uma estimativa — sem compromisso.</p>
+    </div>
+    <div class="calc reveal" style="max-width:680px;">
+      <div class="calc-progress"><div class="calc-progress-bar" id="progBar"></div></div>
 
-<div class="quote-pane active" id="pane-video">
+      <div class="calc-step active" data-step="1">
+        <div class="label">Passo 1 de 3</div>
+        <h3>Tipo de vídeo</h3>
+        <div class="options" data-group="tipo">
+          <button class="opt hover-target" data-value="Vinheta/Intro" data-base="250">Vinheta / Intro<span>Abertura curta</span></button>
+          <button class="opt hover-target" data-value="Social Media Motion" data-base="220">Social Media<span>Reels / Stories</span></button>
+          <button class="opt hover-target" data-value="Vídeo Explicativo" data-base="450">Explicativo<span>Institucional</span></button>
+          <button class="opt hover-target" data-value="Animação de Logo" data-base="200">Animação de logo<span>Branding</span></button>
+        </div>
+      </div>
 
-<div class="quote-field">
-<label>Tipo de peça</label>
-<div class="option-grid">
-<button type="button" class="option-btn" data-group="tipo" data-value="motion" data-base="180" data-label="Motion graphics">Motion graphics</button>
-<button type="button" class="option-btn" data-group="tipo" data-value="edicao" data-base="70" data-label="Edição de vídeo">Edição de vídeo</button>
-</div>
-</div>
+      <div class="calc-step" data-step="2">
+        <div class="label">Passo 2 de 3</div>
+        <h3>Duração aproximada</h3>
+        <div class="options" data-group="duracao">
+          <button class="opt hover-target" data-value="até 15s" data-mult="0.8">Até 15s<span>Curta</span></button>
+          <button class="opt hover-target" data-value="15–30s" data-mult="1">15–30s<span>Padrão</span></button>
+          <button class="opt hover-target" data-value="30–60s" data-mult="1.4">30–60s<span>Média</span></button>
+          <button class="opt hover-target" data-value="1–3min" data-mult="2">1–3min<span>Longa</span></button>
+        </div>
+      </div>
 
-<div class="quote-field">
-<label>Duração estimada da peça</label>
-<div class="duration-row">
-<input type="range" id="duracao" min="5" max="90" value="15" step="5">
-<span class="duration-val mono"><span id="duracao-val">15</span>s</span>
-</div>
-</div>
+      <div class="calc-step" data-step="3">
+        <div class="label">Passo 3 de 3</div>
+        <h3>Estilo</h3>
+        <div class="options" data-group="estilo">
+          <button class="opt hover-target" data-value="Simples" data-mult="1">Simples<span>Formas & texto</span></button>
+          <button class="opt hover-target" data-value="Intermediário" data-mult="1.5">Intermediário<span>Personagens / ilustração</span></button>
+          <button class="opt hover-target" data-value="Avançado" data-mult="2.2">Avançado<span>3D / efeitos complexos</span></button>
+        </div>
+      </div>
 
-<div class="quote-field">
-<label>Complexidade / estilo</label>
-<div class="option-grid">
-<button type="button" class="option-btn" data-group="complexidade" data-value="simples" data-mult="1" data-label="Simples">Simples</button>
-<button type="button" class="option-btn" data-group="complexidade" data-value="intermediario" data-mult="1.5" data-label="Intermediário">Intermediário</button>
-<button type="button" class="option-btn" data-group="complexidade" data-value="complexo" data-mult="2.2" data-label="Complexo / 3D">Complexo / 3D</button>
-</div>
-</div>
+      <div class="calc-step" data-step="4">
+        <div class="calc-result">
+          <div class="label">Estimativa</div>
+          <h3 id="resultTitle">Seu orçamento</h3>
+          <div class="price">Faixa estimada: <b id="resultPrice">—</b></div>
+          <div class="summary" id="resultSummary"></div>
+          <a href="#" id="waLink" target="_blank" rel="noopener" class="btn hover-target">Enviar pelo WhatsApp ↗</a>
+        </div>
+      </div>
 
-</div>
-
-<div class="quote-pane" id="pane-foto">
-
-<div class="quote-field">
-<label>Tipo de peça</label>
-<div class="option-grid">
-<button type="button" class="option-btn" data-group="tipoFoto" data-value="flyer" data-base="45" data-label="Flyer">Flyer</button>
-<button type="button" class="option-btn" data-group="tipoFoto" data-value="post-estatico" data-base="60" data-label="Post estático">Post estático</button>
-<button type="button" class="option-btn" data-group="tipoFoto" data-value="identidade-estatica" data-base="150" data-label="Identidade visual (logo estático)">Identidade visual</button>
-</div>
-</div>
-
-<div class="quote-field">
-<label>Quantidade</label>
-<div class="qty-row">
-<button type="button" class="qty-btn" id="qty-minus">−</button>
-<span class="qty-val mono" id="qty-val">1</span>
-<button type="button" class="qty-btn" id="qty-plus">+</button>
-</div>
-</div>
-
-<div class="quote-field">
-<label>Complexidade / estilo</label>
-<div class="option-grid">
-<button type="button" class="option-btn" data-group="complexidadeFoto" data-value="simples" data-mult="1" data-label="Simples">Simples</button>
-<button type="button" class="option-btn" data-group="complexidadeFoto" data-value="intermediario" data-mult="1.5" data-label="Intermediário">Intermediário</button>
-<button type="button" class="option-btn" data-group="complexidadeFoto" data-value="complexo" data-mult="2.2" data-label="Complexo / 3D">Complexo / 3D</button>
-</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="quote-result">
-<div class="eyebrow"><span class="dot"></span>ESTIMATIVA</div>
-<div class="quote-price"><span id="preco">R$ —</span></div>
-<div class="quote-note">Valor aproximado. O orçamento final é fechado depois de eu ver as referências e o briefing completo.</div>
-<div class="quote-summary" id="resumo">Selecione o tipo de peça e a complexidade ao lado.</div>
-<a class="btn-primary" id="btn-whatsapp" href="#" target="_blank" rel="noopener" style="opacity:0.4;pointer-events:none;">
-Enviar pedido no WhatsApp →
-</a>
-</div>
-
-</div>
-</div>
-</div>
+      <div class="calc-nav">
+        <button id="calcBack" style="visibility:hidden;">← Voltar</button>
+        <button id="calcRestart" style="display:none;">Refazer simulação</button>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="final-cta">
-<div class="eyebrow" style="justify-content:center;"><span class="dot"></span>BORA CRIAR JUNTOS</div>
-<h2>Tem uma ideia parada esperando pra se mexer?</h2>
-<p>Faz o orçamento acima ou chama direto no Instagram e me conta o projeto.</p>
-<div class="cta-row">
-<a class="btn-primary" href="https://www.instagram.com/wmotiondesign" target="_blank" rel="noopener">Mandar DM <span class="handle" style="color:#0A0A0A">@wmotiondesign</span></a>
-</div>
-</div>
-
-<footer>
-<div class="wrap foot-row">
-<span>© 2026 WMotion Design — Well Designer Gráfico</span>
-<span style="display:flex;gap:18px;">
-<a href="https://www.instagram.com/wmotiondesign" target="_blank" rel="noopener">Instagram</a>
-<a href="https://www.behance.net/wellberthsousa1" target="_blank" rel="noopener">Behance</a>
-</span>
-</div>
+<footer id="contato">
+  <div class="wrap">
+    <div class="foot-head reveal">Vamos fazer<br>seu projeto se mover?</div>
+    <div class="foot-links">
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://instagram.com/wmotiondesign" target="_blank" rel="noopener" class="hover-target">@wmotiondesign</a>
+        <a href="https://www.behance.net/wellberthsousa1" target="_blank" rel="noopener" class="hover-target">Behance</a>
+      </div>
+      <div class="foot-col">
+        <h4>Estúdio</h4>
+        <p>Wellberth Sousa</p>
+        <p>Natal, RN</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>WMotion Design © 2026</span>
+      <span>Feito quadro a quadro.</span>
+    </div>
+  </div>
 </footer>
 
 <script>
-const tc = document.getElementById('tc');
-let frame = 0;
-function pad(n){return n.toString().padStart(2,'0');}
-setInterval(()=>{
-frame++;
-const f = frame % 24;
-const totalSec = Math.floor(frame/24);
-const s = totalSec % 60;
-const m = Math.floor(totalSec/60) % 60;
-const h = Math.floor(totalSec/3600);
-tc.textContent = `${pad(h)}:${pad(m)}:${pad(s)}:${pad(f)}`;
-}, 1000/24);
+// Custom cursor
+const cursor = document.getElementById('cursor');
+window.addEventListener('mousemove', e=>{
+  cursor.style.left = e.clientX+'px';
+  cursor.style.top = e.clientY+'px';
+});
+document.querySelectorAll('.hover-target, .opt, a, button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cursor.classList.add('big'));
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
+});
 
-// ORÇAMENTO
-const WHATSAPP_NUMBER = "5584987633772";
+// Kinetic hero layers follow pointer
+const heroWrap = document.getElementById('heroWrap');
+const kinetic = document.getElementById('kinetic');
+heroWrap.addEventListener('mousemove', e=>{
+  const r = heroWrap.getBoundingClientRect();
+  const x = (e.clientX - r.left)/r.width - .5;
+  const y = (e.clientY - r.top)/r.height - .5;
+  kinetic.style.setProperty('--kx', (x*26)+'px');
+  kinetic.style.setProperty('--ky', (y*16)+'px');
+});
+heroWrap.addEventListener('mouseleave', ()=>{
+  kinetic.style.setProperty('--kx','0px');
+  kinetic.style.setProperty('--ky','0px');
+});
 
-let activeTab = 'video';
-let state = {
-  video: { tipo: null, complexidade: null, duracao: 15 },
-  foto: { tipoFoto: null, complexidadeFoto: null, qty: 1 }
-};
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+},{threshold:.15});
+revealEls.forEach(el=>io.observe(el));
 
-// abas
-document.querySelectorAll('.quote-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    activeTab = tab.dataset.tab;
-    document.querySelectorAll('.quote-tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('pane-video').classList.toggle('active', activeTab === 'video');
-    document.getElementById('pane-foto').classList.toggle('active', activeTab === 'foto');
-    updateQuote();
+// Services accordion
+document.querySelectorAll('.service-row').forEach(row=>{
+  row.addEventListener('click', ()=>{
+    const wasOpen = row.classList.contains('open');
+    document.querySelectorAll('.service-row').forEach(r=>r.classList.remove('open'));
+    if(!wasOpen) row.classList.add('open');
   });
 });
 
-// duração (vídeo)
-const duracaoInput = document.getElementById('duracao');
-const duracaoVal = document.getElementById('duracao-val');
-duracaoInput.addEventListener('input', () => {
-  state.video.duracao = parseInt(duracaoInput.value, 10);
-  duracaoVal.textContent = state.video.duracao;
-  updateQuote();
-});
+// Calculator
+const steps = Array.from(document.querySelectorAll('.calc-step'));
+let current = 1;
+const choice = {tipo:null, tipoBase:0, duracao:null, duracaoMult:1, estilo:null, estiloMult:1};
+const progBar = document.getElementById('progBar');
+const backBtn = document.getElementById('calcBack');
+const restartBtn = document.getElementById('calcRestart');
 
-// quantidade (foto)
-const qtyVal = document.getElementById('qty-val');
-document.getElementById('qty-minus').addEventListener('click', () => {
-  state.foto.qty = Math.max(1, state.foto.qty - 1);
-  qtyVal.textContent = state.foto.qty;
-  updateQuote();
-});
-document.getElementById('qty-plus').addEventListener('click', () => {
-  state.foto.qty = Math.min(50, state.foto.qty + 1);
-  qtyVal.textContent = state.foto.qty;
-  updateQuote();
-});
+function showStep(n){
+  steps.forEach(s=> s.classList.toggle('active', Number(s.dataset.step)===n));
+  progBar.style.width = Math.min(n,4)/4*100 + '%';
+  backBtn.style.visibility = n>1 && n<4 ? 'visible':'hidden';
+  restartBtn.style.display = n===4 ? 'inline-block':'none';
+  current = n;
+}
 
-// botões de opção (tipo/complexidade, vídeo e foto)
-document.querySelectorAll('.option-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const group = btn.dataset.group;
-    const target = (group === 'tipoFoto' || group === 'complexidadeFoto') ? state.foto : state.video;
-    document.querySelectorAll(`.option-btn[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    target[group] = {
-      value: btn.dataset.value,
-      label: btn.dataset.label,
-      base: btn.dataset.base ? parseFloat(btn.dataset.base) : null,
-      mult: btn.dataset.mult ? parseFloat(btn.dataset.mult) : null
-    };
-    updateQuote();
+document.querySelectorAll('.options').forEach(group=>{
+  group.addEventListener('click', e=>{
+    const btn = e.target.closest('.opt');
+    if(!btn) return;
+    group.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+    btn.classList.add('selected');
+    const g = group.dataset.group;
+    if(g==='tipo'){ choice.tipo = btn.dataset.value; choice.tipoBase = Number(btn.dataset.base); }
+    if(g==='duracao'){ choice.duracao = btn.dataset.value; choice.duracaoMult = Number(btn.dataset.mult); }
+    if(g==='estilo'){ choice.estilo = btn.dataset.value; choice.estiloMult = Number(btn.dataset.mult); }
+    setTimeout(()=>{
+      if(current<3){ showStep(current+1); }
+      else { finish(); }
+    }, 280);
   });
 });
 
-function formatBRL(n){
-  return n.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+backBtn.addEventListener('click', ()=>{ if(current>1) showStep(current-1); });
+restartBtn.addEventListener('click', ()=>{
+  document.querySelectorAll('.opt.selected').forEach(o=>o.classList.remove('selected'));
+  showStep(1);
+});
+
+function finish(){
+  const base = choice.tipoBase * choice.duracaoMult * choice.estiloMult;
+  const low = Math.round(base*0.9/10)*10;
+  const high = Math.round(base*1.25/10)*10;
+  document.getElementById('resultPrice').textContent = `R$ ${low} – R$ ${high}`;
+  document.getElementById('resultSummary').innerHTML =
+    `<b>Tipo:</b> ${choice.tipo}<br><b>Duração:</b> ${choice.duracao}<br><b>Estilo:</b> ${choice.estilo}`;
+  const msg = `Olá! Fiz uma simulação no site da WMotion Design:%0A- Tipo: ${choice.tipo}%0A- Duração: ${choice.duracao}%0A- Estilo: ${choice.estilo}%0A- Estimativa: R$ ${low} a R$ ${high}%0A%0AGostaria de fechar um orçamento mais detalhado!`;
+  document.getElementById('waLink').href = `https://wa.me/558498763772?text=${msg}`;
+  showStep(4);
 }
 
-function updateQuote(){
-  const precoEl = document.getElementById('preco');
-  const resumoEl = document.getElementById('resumo');
-  const btn = document.getElementById('btn-whatsapp');
-
-  if(activeTab === 'video'){
-    const s = state.video;
-    if(!s.tipo || !s.complexidade){
-      precoEl.textContent = 'R$ —';
-      resumoEl.textContent = 'Selecione o tipo de peça e a complexidade ao lado.';
-      btn.style.opacity = '0.4';
-      btn.style.pointerEvents = 'none';
-      return;
-    }
-    const base = s.tipo.base;
-    const mult = s.complexidade.mult;
-    const duracao = s.duracao;
-    const segundosExtra = Math.max(0, duracao - 15);
-    const custoDuracao = (segundosExtra / 5) * (base * 0.18);
-    const valorEstimado = (base + custoDuracao) * mult;
-    const min = Math.round(valorEstimado * 0.9 / 10) * 10;
-    const max = Math.round(valorEstimado * 1.25 / 10) * 10;
-
-    precoEl.innerHTML = `R$ ${formatBRL(min)} <span>– R$ ${formatBRL(max)}</span>`;
-    resumoEl.innerHTML = `// tipo: ${s.tipo.label}<br>// duração: ${duracao}s<br>// complexidade: ${s.complexidade.label}`;
-
-    const msg = `Olá! Fiz uma simulação de orçamento no site:%0A%0A` +
-      `Tipo de peça: ${s.tipo.label}%0A` +
-      `Duração: ${duracao}s%0A` +
-      `Complexidade: ${s.complexidade.label}%0A` +
-      `Estimativa: R$ ${formatBRL(min)} – R$ ${formatBRL(max)}%0A%0A` +
-      `Quero fechar esse projeto, pode me passar os próximos passos?`;
-
-    btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-    btn.style.opacity = '1';
-    btn.style.pointerEvents = 'auto';
-
-  } else {
-    const s = state.foto;
-    if(!s.tipoFoto || !s.complexidadeFoto){
-      precoEl.textContent = 'R$ —';
-      resumoEl.textContent = 'Selecione o tipo de peça e a complexidade ao lado.';
-      btn.style.opacity = '0.4';
-      btn.style.pointerEvents = 'none';
-      return;
-    }
-    const base = s.tipoFoto.base;
-    const mult = s.complexidadeFoto.mult;
-    const qty = s.qty;
-    const valorEstimado = base * mult * qty;
-    const min = Math.round(valorEstimado * 0.95 / 5) * 5;
-    const max = Math.round(valorEstimado * 1.1 / 5) * 5;
-
-    precoEl.innerHTML = `R$ ${formatBRL(min)} <span>– R$ ${formatBRL(max)}</span>`;
-    resumoEl.innerHTML = `// tipo: ${s.tipoFoto.label}<br>// quantidade: ${qty}<br>// complexidade: ${s.complexidadeFoto.label}`;
-
-    const msg = `Olá! Fiz uma simulação de orçamento no site:%0A%0A` +
-      `Tipo de peça: ${s.tipoFoto.label}%0A` +
-      `Quantidade: ${qty}%0A` +
-      `Complexidade: ${s.complexidadeFoto.label}%0A` +
-      `Estimativa: R$ ${formatBRL(min)} – R$ ${formatBRL(max)}%0A%0A` +
-      `Quero fechar esse projeto, pode me passar os próximos passos?`;
-
-    btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-    btn.style.opacity = '1';
-    btn.style.pointerEvents = 'auto';
-  }
-}
+// Nav toggle (mobile) simple scroll-to on tap of "Menu" cycles anchors
+document.getElementById('navToggle').addEventListener('click', ()=>{
+  document.getElementById('orcamento').scrollIntoView({behavior:'smooth'});
+});
 </script>
 </body>
 </html>
